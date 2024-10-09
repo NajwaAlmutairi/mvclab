@@ -5,7 +5,6 @@ import dotenv from "dotenv";
 const app = express();
 app.use(express.json());
 
-const port = 1820;
 dotenv.config();
 
 app.get("/books", (req, res) => {
@@ -72,4 +71,4 @@ async function main() {
   console.log("here");
 }
 
-app.listen(port, () => {});
+app.listen(process.env.port, () => {});
