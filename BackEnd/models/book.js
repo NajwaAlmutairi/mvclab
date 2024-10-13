@@ -15,6 +15,11 @@ const book = new Schema ({
       languages:Array,
       classification:String,
 
+      writer: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'User',
+        required: true
+        },
     },
         {timestamps:true}
     
